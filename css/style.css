@@ -1,1 +1,43 @@
 
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Detta gör att bilderna täcker hela området utan att bli förvrängda */
+}
+
+/* För mobiltelefoner (under 576px) */
+@media (max-width: 575px) {
+    /* Här kan du justera din layout eller stil för mobiltelefoner */
+    .navbar-nav {
+        display: block; /* Gör menyn vertikal istället för horisontell */
+    }
+
+    /* Ändra storleken på bilder för mobiltelefoner */
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* För små enheter (t.ex. mindre tablets) */
+@media (max-width: 767px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+/* För tabletstorlekar (från 768px till 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-nav {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/* För större enheter, exempelvis laptops och stationära skärmar */
+@media (min-width: 992px) {
+    .navbar-nav {
+        display: flex; /* Gör menyn horisontell */
+    }
+}
